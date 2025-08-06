@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Archivo de configuración principal de Maven (Project Object Model) -->
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <!-- Versión del modelo POM utilizada -->
+    <modelVersion>4.0.0</modelVersion>
+
+    <!-- Coordenadas del proyecto -->
+    <groupId>com.poo.java</groupId>  <!-- Identificador único del grupo del proyecto -->
+    <artifactId>expo</artifactId>    <!-- Nombre del proyecto -->
+    <version>1.0-SNAPSHOT</version>  <!-- Versión actual del proyecto -->
+
+    <!-- Propiedades del proyecto -->
+    <properties>
+        <maven.compiler.source>17</maven.compiler.source>  <!-- Versión del código fuente Java -->
+        <maven.compiler.target>17</maven.compiler.target>  <!-- Versión objetivo de bytecode -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>  <!-- Codificación de archivos -->
+    </properties>
+
+    <!-- Configuración de construcción del proyecto -->
+    <build>
+        <plugins>
+            <!-- Plugin del compilador de Maven -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.11.0</version>
+                <configuration>
+                    <source>${maven.compiler.source}</source>  <!-- Usa la versión Java definida en properties -->
+                    <target>${maven.compiler.target}</target>  <!-- Usa la versión objetivo definida en properties -->
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!-- Dependencias del proyecto -->
+    <dependencies>
+        <!-- Driver de PostgreSQL para conexión a base de datos -->
+        <dependency>
+            <groupId>org.postgresql</groupId>
+            <artifactId>postgresql</artifactId>
+            <version>42.6.0</version>
+        </dependency>
+    </dependencies>
+
+</project>
