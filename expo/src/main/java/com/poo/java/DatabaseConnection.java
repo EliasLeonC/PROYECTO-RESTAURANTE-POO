@@ -11,7 +11,8 @@ import java.sql.SQLException;
  */
 public class DatabaseConnection {
     /** URL de conexión a la base de datos PostgreSQL */
-    private static final String URL = "jdbc:postgresql://localhost:5432/escuela_alumnos_db";
+    private static final String URL = "jdbc:postgresql://localhost:5432/Restataurante";
+
     /** Usuario de la base de datos */
     private static final String USER = "postgres";
     /** Contraseña de la base de datos */
